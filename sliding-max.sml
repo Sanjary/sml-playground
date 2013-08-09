@@ -1,3 +1,4 @@
+(* O(NM) where N - list size, M - window size *)
 fun sliding_max n l =
     let
         fun sliding_window off = List.take (List.drop (l, off), n) handle Subscript => []
@@ -9,3 +10,5 @@ fun sliding_max n l =
     in
         loop 0 []
     end
+
+
